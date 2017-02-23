@@ -51,7 +51,7 @@ void draw(){
     wan = new Lightsaber ("Wan", 100,1,40,50,4);
 
      
-     //Batman
+     //Darth vader
        if ((key == 'd' || key == 'D')&&flag1){
          flag1=false;
          if(splayer==1){
@@ -64,7 +64,7 @@ void draw(){
             pantalla=4;
           }
      }
-  //Deadpool
+  //Darth Maul
         if ((key == 'm' || key == 'M')&&flag1){
           flag1=false;
          if(splayer==1){
@@ -77,7 +77,7 @@ void draw(){
             pantalla=4;
           }
         }
-     //Loki
+     //Mace windu
        if ((key == 'w' || key == 'W')&&flag1){
          flag1=false;
          if(splayer==1){
@@ -90,7 +90,7 @@ void draw(){
             pantalla=4;
           }
        }
-      //Ironman
+      //Yodanna
        if ((key == 'n' || key == 'N')&&flag1){
          flag1=false;
          if(splayer==1){
@@ -103,7 +103,7 @@ void draw(){
             pantalla=4;
           }
        }
-     //Superman 
+     //Obi wan  
        if ((key == 'o' || key == 'O')&&flag1){
          flag1=false;
          if(splayer==1){
