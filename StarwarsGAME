@@ -1,3 +1,7 @@
+
+import ddf.minim.*;
+Minim cadena;
+AudioPlayer Starwars;
 Lightsaber vader;
 Lightsaber maul;
 Lightsaber windu;
@@ -11,6 +15,8 @@ PImage seleccion;
 PImage seleccion1;
 PImage fondo;
 PImage resultado1, resultado2;
+PImage fondo2, fondo3, fondo4;
+PImage escenario;
 PFont font;
 int value = 0;
 int turno = 1;
@@ -29,9 +35,13 @@ void setup(){
     inicio = loadImage("starwarsinicio.jpg");
     seleccion1= loadImage("seleccionP2.jpg");
     seleccion = loadImage("seleccion.jpg");
-    fondo = loadImage("fondopelea.jpg");
+    fondo  = loadImage("fondopelea.jpg");
     resultado1 = loadImage("resolucionP1.jpg");
     resultado2 = loadImage("resolucionP2.jpg");
+    
+    cadena =new Minim(this);
+    Starwars=cadena.loadFile("SW.mp3");
+    Starwars.play();
 }
 void draw(){
   switch(pantalla){ 
@@ -41,6 +51,7 @@ void draw(){
     if (mousePressed==true){
       pantalla +=1;
     }
+    
    break;
    case 1:
      background(seleccion);
@@ -64,7 +75,7 @@ void draw(){
             pantalla=4;
           }
      }
-  //Darth Maul
+  //Darth maul
         if ((key == 'm' || key == 'M')&&flag1){
           flag1=false;
          if(splayer==1){
@@ -103,7 +114,7 @@ void draw(){
             pantalla=4;
           }
        }
-     //Obi wan  
+     //Obi wan 
        if ((key == 'o' || key == 'O')&&flag1){
          flag1=false;
          if(splayer==1){
@@ -118,13 +129,14 @@ void draw(){
        }
     break;
     case 2:
-      background(fondo);
+      background (fondo); 
       textFont(font);
       fill(255,255,255);
       text(player1.hp,10,50);
       text(player2.hp,550,50);
       text(player1.nombre,150,50);
       text(player2.nombre,680,50);
+       fill(#FA3A3A);
       rect(10, 70, player1.hp*3, 20);
       rect(550, 70, player2.hp*3, 20);
       pushMatrix();
